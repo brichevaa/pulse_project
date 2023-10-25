@@ -37,12 +37,20 @@
    }
    &__content {
       margin-top: 57px;
+      display: none;
+      flex-wrap: wrap;
+      gap: 20px;
+      &_active {
+         display: flex;
+      }
    }
    &-item {
+      position: relative;
       padding: 20px;
       width: 303px;
       min-height: 442px;
       border: 2px solid #e8e8e8;
+      overflow: hidden;
       &__img {
          display: block;
          margin: 0px auto;
@@ -63,14 +71,100 @@
          font-size: 14px;
          font-weight: 300;
          max-width: 250px;
+         margin-top: 15px;
       }
       &__link {
+         margin-top: 10px;
          display: block;
          color: $main-color;
          text-align: center;
          font-size: 14px;
          font-weight: 500;
          text-decoration-line: underline;
+         text-transform: uppercase;
+      }
+      hr {
+         margin: 17px 0px 17px 0px;
+         height: 1px;
+         background-color: #e8e8e8;
+         border-bottom: none;
+      }
+      &__footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+      }
+      &__old-price {
+         color: #555;
+         font-size: 14px;
+         font-weight: 300;
+         text-decoration-line: line-through;
+      }
+      &__price {
+         color: #050505;
+         font-size: 20px;
+         font-weight: 700;
+         line-height: 20px; /* 100% */
+      }
+      &__wrapper {
+         display: flex;
+         width: calc(200% + 40px);
+      }
+      &__content {
+         width: 50%;
+         transform: translateX(-100%);
+         margin-right: 0px;
+         transition: 0.5s all;
+         &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+         }
+      }
+      &__list {
+         position: relative;
+         width: 50%;
+         margin-left: 20px;
+         margin-bottom: 0;
+         transform: translateX(0%);
+         padding-right: 20px;
+         padding-left: 19px;
+         transition: 0.5s all;
+         list-style-type: none;
+         &_active {
+            transform: translateX(-100%);
+            margin-left: 0px;
+         }
+         li {
+            position: relative;
+            color: #555;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 21px; /* 150% */
+            margin-bottom: 10px;
+            &::before {
+               content: '';
+               position: absolute;
+               width: 5px;
+               height: 5px;
+               background-color: $main-color;
+               left: -14px;
+               top: 8px;
+            }
+         }
+      }
+      &__back {
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(calc(-50% - 19px));
+         display: block;
+         margin: 0px auto;
+         color: $main-color;
+         text-align: center;
+         font-size: 14px;
+         font-weight: 500;
+         text-decoration-line: underline;
+         text-transform: uppercase;
       }
    }
 }

@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="css/style.min.css" />
    </head>
    <body>
-      <section class="promo">
+      <section class="promo" id="up">
          <div class="container">
             <header class="header">
                <a href="#" class="header__logo">
@@ -66,7 +66,11 @@
                   </div>
                </div>
                <div class="advantages__item">
-                  <img src="icons/advantages/heart.png" alt="cup" class="advantages__icon" />
+                  <img
+                     src="icons/advantages/heart.png"
+                     alt="heart"
+                     class="advantages__icon advantages__icon_animated"
+                  />
                   <div class="advantages__subtitle">Заботимся о здоровье</div>
                   <div class="advantages__text">
                      Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью
@@ -74,7 +78,7 @@
                   </div>
                </div>
                <div class="advantages__item">
-                  <img src="icons/advantages/shoe.png" alt="cup" class="advantages__icon" />
+                  <img src="icons/advantages/shoe.png" alt="shoe" class="advantages__icon" />
                   <div class="advantages__subtitle">Учим бегать</div>
                   <div class="advantages__text">
                      Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в
@@ -533,6 +537,10 @@
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
          </div>
       </div>
+
+      <a href="#up" class="pageup">
+         <img src="icons/circle-chevron-up-solid.svg" alt="up" />
+      </a>
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script
